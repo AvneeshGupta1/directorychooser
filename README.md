@@ -7,13 +7,17 @@ Add it in your root build.gradle at the end of repositories:
         mavenCentral()
         maven { url 'http://guardian.github.com/maven/repo-releases' }
     }
-	//add this to project build.gradle
+    
+	
+     //add this to project build.gradle
 	allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
 		}
 	}
+        
+        
 Step 2. Add the dependency
 
 	dependencies {
