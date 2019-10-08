@@ -10,6 +10,7 @@
             android:value="string" />
         <activity
             android:name="net.rdrei.android.dirchooser.DirectoryChooserActivity"
+            android:label="@string/choose_directory"
             android:theme="@style/AppTheme" />
     </application>
 </manifest>
