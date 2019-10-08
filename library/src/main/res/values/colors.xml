@@ -2,7 +2,9 @@
 <resources>
 
     <color name="bright_blue">#33B5E5</color>
-
+    <color name="colorPrimaryDark">#0088BB</color>
+    <color name="colorPrimary">#2DC5FF</color>
+    <color name="colorAccent">#2DC5FF</color>
     <!-- Use Gingerbread-orange -->
     <color name="selection_background_color">#FEBB20</color>
 

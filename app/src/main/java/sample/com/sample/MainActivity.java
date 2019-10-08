@@ -2,24 +2,19 @@ package sample.com.sample;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.directorypicker.R;
-import com.sample.eventbus.Event;
-import com.sample.eventbus.EventManager;
-import com.sample.eventbus.OnEventListener;
 
 import net.rdrei.android.dirchooser.DirectoryChooserActivity;
 import net.rdrei.android.dirchooser.DirectoryChooserConfig;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, OnEventListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final int REQUEST_DIRECTORY = 12;
-    private String[] event = {Event.FOLDER_UPDATE};
     private Button btnPick;
 
     @Override
@@ -28,7 +23,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         btnPick = findViewById(R.id.btnNext);
         btnPick.setOnClickListener(this);
-        EventManager.getInstance().addOnEventListener(this, event);
     }
 
     @Override
@@ -39,7 +33,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     DirectoryChooserActivity.class);
             final DirectoryChooserConfig config = DirectoryChooserConfig.builder()
                     .newDirectoryName("Choose Directory")
-                    .allowReadOnlyDirectory(true)
                     .allowNewDirectoryNameModification(true)
                     .build();
 
@@ -64,10 +57,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    @Override
-    public void onEvent(String event, Object object) {
-        if (event.equals(Event.FOLDER_UPDATE)) {
-            Toast.makeText(this, "Event Occured", Toast.LENGTH_SHORT).show();
-        }
-    }
+
 }

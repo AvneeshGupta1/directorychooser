@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/avneesh-directorychooser.iml" filepath="$PROJECT_DIR$/avneesh-directorychooser.iml" />
       <module fileurl="file://$PROJECT_DIR$/directorychooser.iml" filepath="$PROJECT_DIR$/directorychooser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/directorychooser-app.iml" filepath="$PROJECT_DIR$/app/directorychooser-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/directorychooser-library.iml" filepath="$PROJECT_DIR$/library/directorychooser-library.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>
   </component>

@@ -1,14 +1,15 @@
 package net.rdrei.android.dirchooser;
 
-import android.annotation.SuppressLint;
-import android.app.ActionBar;
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 /**
  * Let's the user choose a directory on the storage device. The selected folder
@@ -23,9 +24,14 @@ public class DirectoryChooserActivity extends AppCompatActivity implements
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setupActionBar();
         setContentView(R.layout.directory_chooser_activity);
-
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionbar = getSupportActionBar();
+        if (actionbar != null) {
+            actionbar.setDisplayHomeAsUpEnabled(true);
+            actionbar.setHomeButtonEnabled(true);
+        }
         final DirectoryChooserConfig config = getIntent().getParcelableExtra(EXTRA_CONFIG);
 
         if (config == null) {
@@ -39,14 +45,6 @@ public class DirectoryChooserActivity extends AppCompatActivity implements
             fragmentManager.beginTransaction()
                     .add(R.id.main, fragment)
                     .commit();
-        }
-    }
-
-    /* package */void setupActionBar() {
-        // there might not be an ActionBar, for example when started in Theme.Holo.Dialog.NoActionBar theme
-        @SuppressLint("AppCompatMethod") final ActionBar actionBar = getActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
         }
     }
 

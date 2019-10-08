@@ -3,10 +3,13 @@
     package="net.rdrei.android.dirchooser">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <application android:theme="@style/DirectoryChooserTheme">
+
+    <application android:theme="@style/AppTheme">
         <meta-data
             android:name="string"
             android:value="string" />
-        <activity android:name="net.rdrei.android.dirchooser.DirectoryChooserActivity" />
+        <activity
+            android:name="net.rdrei.android.dirchooser.DirectoryChooserActivity"
+            android:theme="@style/AppTheme" />
     </application>
 </manifest>

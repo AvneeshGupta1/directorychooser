@@ -52,9 +52,13 @@ public abstract class DirectoryChooserConfig implements Parcelable {
     @AutoParcel.Builder
     public abstract static class Builder {
         public abstract Builder newDirectoryName(String s);
+
         public abstract Builder initialDirectory(String s);
+
         public abstract Builder allowReadOnlyDirectory(boolean b);
+
         public abstract Builder allowNewDirectoryNameModification(boolean b);
+
         public abstract DirectoryChooserConfig build();
     }
 }
