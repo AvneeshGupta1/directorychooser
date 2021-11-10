@@ -1,0 +1,35 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="net.rdrei.android.dirchooser" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="19"
+6-->/Users/avneeshkumar/Development/avneesh/directorychooser/library/src/main/AndroidManifest.xml
+7        android:targetSdkVersion="31" />
+7-->/Users/avneeshkumar/Development/avneesh/directorychooser/library/src/main/AndroidManifest.xml
+8
+9    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+9-->/Users/avneeshkumar/Development/avneesh/directorychooser/library/src/main/AndroidManifest.xml:5:5-80
+9-->/Users/avneeshkumar/Development/avneesh/directorychooser/library/src/main/AndroidManifest.xml:5:22-77
+10
+11    <application android:theme="@style/AppTheme" >
+11-->/Users/avneeshkumar/Development/avneesh/directorychooser/library/src/main/AndroidManifest.xml:7:5-15:19
+11-->/Users/avneeshkumar/Development/avneesh/directorychooser/library/src/main/AndroidManifest.xml:7:18-49
+12        <meta-data
+12-->/Users/avneeshkumar/Development/avneesh/directorychooser/library/src/main/AndroidManifest.xml:8:9-10:38
+13            android:name="string"
+13-->/Users/avneeshkumar/Development/avneesh/directorychooser/library/src/main/AndroidManifest.xml:9:13-34
+14            android:value="string" />
+14-->/Users/avneeshkumar/Development/avneesh/directorychooser/library/src/main/AndroidManifest.xml:10:13-35
+15
+16        <activity
+16-->/Users/avneeshkumar/Development/avneesh/directorychooser/library/src/main/AndroidManifest.xml:11:9-14:47
+17            android:name="net.rdrei.android.dirchooser.DirectoryChooserActivity"
+17-->/Users/avneeshkumar/Development/avneesh/directorychooser/library/src/main/AndroidManifest.xml:12:13-81
+18            android:label="@string/choose_directory"
+18-->/Users/avneeshkumar/Development/avneesh/directorychooser/library/src/main/AndroidManifest.xml:13:13-53
+19            android:theme="@style/AppTheme" />
+19-->/Users/avneeshkumar/Development/avneesh/directorychooser/library/src/main/AndroidManifest.xml:14:13-44
+20    </application>
+21
+22</manifest>
